@@ -12,50 +12,50 @@ O desafio era desenvolver uma aplicação de biblioteca que consome a Guntendex 
 
 - Após a configuração do ambiente e a inicialização da aplicação, selecione uma das opções no menu apresentado.
 
-<img src="./readme-src/menu-literalura" alt="menu" width=500px style="margin-right: 25px; margin-left: 25px;">
+<img src="./readme-src/menu-literalura.png" alt="menu" width=500px style="margin-right: 25px; margin-left: 25px;">
 
 #### Exemplos
 
 - Opção 1 selecionada, fazendo a busca por títulos de livros na Gutendex API:
 
-<img src="./readme-src/opcao1-literalura" alt="opcao1" width=500px style="margin-right: 25px; margin-left: 25px;">
+<img src="./readme-src/opcao1-literalura.png" alt="opcao1" width=500px style="margin-right: 25px; margin-left: 25px;">
 
 - Opção 2 selecionada, fazendo a busca por autores, e depois escolhendo um livro para registro:
 
-<img src="./readme-src/opcao2-literalura" alt="opcao2" width=500px style="margin-right: 25px; margin-left: 25px;">
-<img src="./readme-src/opcao2.1-literalura" alt="opcao2.1" width=500px style="margin-right: 25px; margin-left: 25px;">
+<img src="./readme-src/opcao2-literalura.png" alt="opcao2" width=500px style="margin-right: 25px; margin-left: 25px;">
+<img src="./readme-src/opcao2.1-literalura.png" alt="opcao2.1" width=500px style="margin-right: 25px; margin-left: 25px;">
 
 - Opção 3 selecionada, lista todos os livros armazenados no banco de dados local:
 
-<img src="./readme-src/opcao3-literalura" alt="opcao3" width=500px style="margin-right: 25px; margin-left: 25px;">
+<img src="./readme-src/opcao3-literalura.png" alt="opcao3" width=500px style="margin-right: 25px; margin-left: 25px;">
 
 - Opção 4 selecionada, lista todos os autores armazenados no banco de dados local:
 
-<img src="./readme-src/opcao4-literalura" alt="opcao4" width=500px style="margin-right: 25px; margin-left: 25px;">
+<img src="./readme-src/opcao4-literalura.png" alt="opcao4" width=500px style="margin-right: 25px; margin-left: 25px;">
 
 - Opção 5 selecionada, a partir da busca pelo nome de um autor, a aplicação listará todos os livros deste autor que estão armazenados no banco de dados:
 
-<img src="./readme-src/opcao5-literalura" alt="opcao5" width=500px style="margin-right: 25px; margin-left: 25px;">
+<img src="./readme-src/opcao5-literalura.png" alt="opcao5" width=500px style="margin-right: 25px; margin-left: 25px;">
 
 - Opção 6 selecionada, a partir da seleção de um ano, a aplicação fará uma busca no banco de dados e listará autores que estavam vivos no ano informado:
 
-<img src="./readme-src/opcao6-literalura" alt="opcao6" width=500px style="margin-right: 25px; margin-left: 25px;">
+<img src="./readme-src/opcao6-literalura.png" alt="opcao6" width=500px style="margin-right: 25px; margin-left: 25px;">
 
 - Opção 7 selecionada, a partir da escolha de um idioma, a aplicação fará uma busca no banco de dados e listará livros com o idioma selecionado:
 
-<img src="./readme-src/opcao7-literalura" alt="opcao7" width=500px style="margin-right: 25px; margin-left: 25px;">
+<img src="./readme-src/opcao7-literalura.png" alt="opcao7" width=500px style="margin-right: 25px; margin-left: 25px;">
 
 - Opção 8 selecionada, a aplicação listará os dez (10) livros com maior núro de downloads:
 
-<img src="./readme-src/opcao8-literalura" alt="opcao8" width=500px style="margin-right: 25px; margin-left: 25px;">
+<img src="./readme-src/opcao8-literalura.png" alt="opcao8" width=500px style="margin-right: 25px; margin-left: 25px;">
 
 - Opção 9 selecionada, a aplicação listará os cinco (5) autores que possuem maior número de downloads de seus livros:
 
-<img src="./readme-src/opcao9-literalura" alt="opcao9" width=500px style="margin-right: 25px; margin-left: 25px;">
+<img src="./readme-src/opcao9-literalura.png" alt="opcao9" width=500px style="margin-right: 25px; margin-left: 25px;">
 
 - Opção 10 selecionada, a aplicação retornará algumas estatísticas referentes ao banco de dados:
 
-<img src="./readme-src/opcao10-literalura" alt="opcao10" width=500px style="margin-right: 25px; margin-left: 25px;">
+<img src="./readme-src/opcao10-literalura.png" alt="opcao10" width=500px style="margin-right: 25px; margin-left: 25px;">
 
 - Em caso de erros com nome de livros, nome de autores, seleção em menus, a aplicação retornará ao menu principal.
 
