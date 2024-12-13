@@ -37,9 +37,9 @@ public class Principal {
         int opcao = -1;
         while (opcao != 0) {
             String menu = """
-                    \n---------------------------------
-                    ***** Aplicação LiterAlura *****
-                    ---------------------------------
+                    \n------------------------------------------------
+                    ************* Aplicação LiterAlura *************
+                    ------------------------------------------------
                     1 - Buscar livro pelo título para registro
                     2 - Buscar livro pelo autor para registro
                     3 - Listar livros registrados
@@ -48,11 +48,11 @@ public class Principal {
                     6 - Listar autores vivos em um determinado ano
                     7 - Listar livros em um determinado idioma
                     8 - Top 10 livros mais baixados
-                    9 - Top 5 autores com downloads
+                    9 - Top 5 autores com mais downloads
                     10 - Estatísticas do Banco de Dados
                     
                     0 - Sair
-                    ---------------------------------
+                    ------------------------------------------------
                     Digite uma opção de busca abaixo:""";
 
             System.out.println(menu);
@@ -61,7 +61,7 @@ public class Principal {
                 opcao = leitura.nextInt();
                 leitura.nextLine();
             } catch (InputMismatchException e) {
-                System.out.println("Entrada inválida! Por favor, insira um número válido.");
+                System.out.println("\nEntrada inválida! Por favor, insira um número válido.");
                 leitura.nextLine();
                 continue;
             }
@@ -101,7 +101,7 @@ public class Principal {
                     System.out.println("Saindo...");
                     break;
                 default:
-                    System.out.println("Opção inválida! Tente novamente.");
+                    System.out.println("\nOpção inválida! Tente novamente.");
             }
         }
     }
@@ -130,7 +130,7 @@ public class Principal {
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
         } catch (NullPointerException e) {
-            System.out.println("O livro não foi encontrado.");
+            System.out.println("\nO livro não foi encontrado.");
         } catch (DataIntegrityViolationException e) {
             System.out.println("\nO livro já foi cadastrado anteriormente!");
         }
@@ -202,17 +202,17 @@ public class Principal {
                         });
 
                 if (resultados.isEmpty()) {
-                    System.out.println("Nenhum livro encontrado para o autor informado.");
+                    System.out.println("\nNenhum livro encontrado para o autor informado.");
                     return;
                 }
 
                 resultados.sort(Comparator.comparing(result -> result.get("title").toString().toLowerCase()));
 
-                System.out.println("-------------------");
-                System.out.println("LIVROS ENCONTRADOS:");
-                System.out.println("-------------------");
+                System.out.println("\n----------------------------");
+                System.out.println("     LIVROS ENCONTRADOS     ");
+                System.out.println("----------------------------");
                 resultados.forEach(result -> System.out.println(result.get("title")));
-                System.out.println("-------------------");
+                System.out.println("----------------------------");
                 System.out.println("Informe o título (ou parte dele) do livro que deseja selecionar: ");
                 var tituloSelecionado = leitura.nextLine();
 
@@ -222,7 +222,7 @@ public class Principal {
                         .orElse(null);
 
                 if (livroSelecionado == null) {
-                    System.out.println("Nenhum livro correspondente encontrado.");
+                    System.out.println("\nNenhum livro correspondente encontrado.");
                     return;
                 }
 
@@ -245,6 +245,9 @@ public class Principal {
         if (livros.isEmpty()) {
             System.out.println("\nNenhum livro registrado!");
         } else {
+            System.out.println("\n----------------------------");
+            System.out.println("     LIVROS ENCONTRADOS     ");
+            System.out.println("----------------------------");
             livros.stream()
                     .sorted(Comparator.comparing((Livro livro) -> livro.getAutor().getNome())
                             .thenComparing(Livro::getTitulo))
@@ -258,6 +261,9 @@ public class Principal {
         if (autores.isEmpty()) {
             System.out.println("\nNenhum autor registrado!");
         } else {
+            System.out.println("\n-----------------------------");
+            System.out.println("     AUTORES ENCONTRADOS     ");
+            System.out.println("-----------------------------");
             autores.stream()
                     .sorted(Comparator.comparing(Autor::getNome))
                     .forEach(System.out::println);
@@ -273,7 +279,9 @@ public class Principal {
         if (livros.isEmpty()) {
             System.out.println("\nNenhum livro encontrado para o autor com o nome informado.");
         } else {
-            System.out.println("\nLIVROS ENCONTRADOS: ");
+            System.out.println("\n----------------------------");
+            System.out.println("     LIVROS ENCONTRADOS     ");
+            System.out.println("----------------------------");
             livros.forEach(System.out::println);
         }
     }
@@ -287,7 +295,9 @@ public class Principal {
         if (autoresVivos.isEmpty()) {
             System.out.println("\nNenhum autor encontrado para o ano informado.");
         } else {
-            System.out.println("\nAutores vivos no ano " + ano + ":");
+            System.out.println("\n-----------------------------------");
+            System.out.println("     AUTORES VIVOS NO ANO " + ano);
+            System.out.println("-----------------------------------");
             autoresVivos.forEach(System.out::println);
         }
     }
@@ -332,6 +342,9 @@ public class Principal {
             if (livrosEncontrados.isEmpty()) {
                 System.out.println("\nNenhum livro encontrado para o idioma selecionado.");
             } else {
+                System.out.println("\n----------------------------");
+                System.out.println("     LIVROS ENCONTRADOS     ");
+                System.out.println("----------------------------");
                 for (Livro livro : livrosEncontrados) {
                     System.out.println(livro);
                 }
@@ -349,7 +362,9 @@ public class Principal {
         if (topLivros.isEmpty()) {
             System.out.println("\nNenhum livro registrado!");
         } else {
-            System.out.println("\n----- TOP 10 LIVROS MAIS BAIXADOS -----");
+            System.out.println("\n---------------------------------------");
+            System.out.println("      TOP 10 LIVROS MAIS BAIXADOS      ");
+            System.out.println("---------------------------------------");
             topLivros.forEach(t ->
                     System.out.println("Downloads: " + t.getDownloads() + " | " + t.getTitulo()));
             System.out.println("---------------------------------------");
@@ -364,7 +379,9 @@ public class Principal {
         if (topAutores.isEmpty()) {
             System.out.println("\nNenhum autor registrado!");
         } else {
-            System.out.println("\n----- TOP 5 AUTORES COM MAIS DOWNLOADS -----");
+            System.out.println("\n--------------------------------------------");
+            System.out.println("      TOP 5 AUTORES COM MAIS DOWNLOADS      ");
+            System.out.println("--------------------------------------------");
             for (Object[] result : topAutores) {
                 Autor autor = (Autor) result[0];
                 Long totalDownloads = (Long) result[1];
@@ -378,13 +395,15 @@ public class Principal {
         List<Livro> livros = livroRepositorio.findAll();
 
         if (livros.isEmpty()) {
-            System.out.println("Nenhum livro registrado no banco de dados.");
+            System.out.println("\nNenhum livro registrado no banco de dados.");
         } else {
             DoubleSummaryStatistics estatisticas = livros.stream()
                     .mapToDouble(Livro::getDownloads)
                     .summaryStatistics();
 
-            System.out.println("\n----- Estatísticas do Banco de Dados -----");
+            System.out.println("\n------------------------------------------");
+            System.out.println("      ESTATÍSTICAS DO BANCO DE DADOS      ");
+            System.out.println("------------------------------------------");
             System.out.println("Total de livros: " + estatisticas.getCount());
             System.out.println("Soma dos downloads: " + estatisticas.getSum());
             System.out.println("Média dos downloads: " + estatisticas.getAverage());
