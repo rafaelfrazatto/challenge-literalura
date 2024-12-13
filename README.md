@@ -82,4 +82,4 @@ O desafio era desenvolver uma aplicação de biblioteca que consome a Guntendex 
 
 ## Badge de Conclusão
 
-<img src="./Badge-Literalura.png" alt="Badge de conclusão do challenge." width=500px style="margin-right: 25px; margin-left: 25px;">
+<img src="./readme-src/Badge-Literalura.png" alt="Badge de conclusão do challenge." width=500px style="margin-right: 25px; margin-left: 25px;">
