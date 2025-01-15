@@ -2,7 +2,7 @@
 
 ## Sobre
 
-Este desafio foi proposto como finalização da trilha **"Java e Spring Framework G7 - ONE (Oracle Next Education)"** destinada aos alunos da especialização em back-end do programa ONE, desenvolvido pela **Alura** em parceria com a **Oracle**. </br>
+Este desafio foi proposto como parte fundamental na trilha **"Java e Spring Framework G7 - ONE (Oracle Next Education)"** destinada aos alunos da especialização em back-end do programa ONE, desenvolvido pela **Alura** em parceria com a **Oracle**. </br>
 O projeto visa aplicar todos os conteúdos aprendidos durantes os cursos da trilha em questão e das anteriores, fazendo o uso principalmente do Spring Framework, consumo de uma API, JPA e banco de dados (PostgreSQL).</br>
 O desafio era desenvolver uma aplicação de biblioteca que consome a Guntendex API, a fim de coletar dados de livros e autores e armazena-los em um banco de dados.</br>
 
